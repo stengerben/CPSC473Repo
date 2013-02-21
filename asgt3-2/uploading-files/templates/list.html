@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+        <title>
+            uploading-files
+        </title>
+    </head>
+    <body>
+        <h1>
+            <code>uploading-files</code>
+        </h1>
+        <h2>
+            Available Files
+        </h2>
+        <ul>
+            ${file_list}
+        </ul>
+        <h2>
+            Upload a new file
+        </h2>
+        <form method="POST" action="/upload" enctype="multipart/form-data">
+            Tags<input type="text" name="tags"/>
+            <input
+                type="file"
+                name="uploaded_file"
+            />
+            <input id="upload" type="submit" value="Upload" />
+        </form>
+    </body>
+</html>
